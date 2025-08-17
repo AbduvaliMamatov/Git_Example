@@ -1,4 +1,4 @@
-namespace Git_Example;
+namespace Git_Example.Repositories.Abstractions;
 
 public interface IBaseRepository<TEntity, TKey>
     where TEntity : class
