@@ -2,7 +2,7 @@ namespace Git_Example;
 
 public interface IBaseRepository<TEntity, TKey>
     where TEntity : class
-    where TKey: IComparable
+    where TKey: IComparable, IEquatable<TKey>
 {
     Task<TEntity?> GetByIdAsync(TKey id, CancellationToken cancellationToken = default);
     Task<List<TEntity>> GetAllAsync(CancellationToken cancellationToken = default);
