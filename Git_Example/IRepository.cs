@@ -1,10 +1,10 @@
 namespace Git_Example;
 
-public interface IBaseRepository<T> where T : class
+public interface IBaseRepository<TEntity> where TEntity : class
 {
-    Task<T?> GetByIdAsync(T id, CancellationToken cancellationToken = default);
-    Task<List<T>> GetAllAsync(CancellationToken cancellationToken = default);
-    Task<T> AddAsync(T entity, CancellationToken cancellationToken = default);
-    Task UpdateAsync(T entity, CancellationToken cancellationToken = default);
-    Task DeleteAsync(T entity, CancellationToken cancellationToken = default);
+    Task<TEntity?> GetByIdAsync(TEntity id, CancellationToken cancellationToken = default);
+    Task<List<TEntity>> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken = default);
+    Task UpdateAsync(TEntity entity, CancellationToken cancellationToken = default);
+    Task DeleteAsync(TEntity entity, CancellationToken cancellationToken = default);
 }

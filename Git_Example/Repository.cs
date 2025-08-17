@@ -2,31 +2,31 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Git_Example;
 
-public class BaseRepository<TContext,T>(TContext context, T entity) : IBaseRepository<T>
-    where T : class
-    where TContext: DbContext
+public class BaseRepository<TContext, TEntity>(TContext context, TEntity entity) : IBaseRepository<T>
+    where TEntity : class
+    where TContext : DbContext
 {
-    public Task<T> AddAsync(T entity, CancellationToken cancellationToken = default)
+    public Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
 
-    public Task DeleteAsync(T entity, CancellationToken cancellationToken = default)
+    public Task DeleteAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
 
-    public Task<List<T>> GetAllAsync(CancellationToken cancellationToken = default)
+    public Task<List<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
 
-    public Task<T?> GetByIdAsync(T id, CancellationToken cancellationToken = default)
+    public Task<TEntity?> GetByIdAsync(TEntity id, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
 
-    public Task UpdateAsync(T entity, CancellationToken cancellationToken = default)
+    public Task UpdateAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
         throw new NotImplementedException();
     }
