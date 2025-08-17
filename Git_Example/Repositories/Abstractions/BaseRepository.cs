@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Git_Example;
+namespace Git_Example.Repositories.Abstractions;
 
 public class BaseRepository<TContext, TEntity, TKey>(TContext context, TEntity entity, TKey id) : IBaseRepository<TEntity, TKey>
     where TEntity : class
