@@ -1,8 +1,7 @@
-using Git_Example;
 using Git_Example.Data;
 using Git_Example.Repositories;
+using Git_Example.Repositories.Abstractions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
